@@ -85,6 +85,29 @@ image = Image.fromarray(occ_grid1)
 image.show()
 
 
+X = []
+Y = []
+for i in path:
+    X.append(i[1])
+    Y.append(i[0])
+    plt.plot(i[1],i[0],'bo')
+plt.imshow(image)
+plt.plot(X,Y)
+xV = []
+yV = []
+for i in V1:
+    xV.append(i[1])
+    yV.append(i[0])
+plt.scatter(xV,yV,c ="red",s = 5)
+plt.show()
+
+
+
+
+
+
+
+# ALTERNATIVE APPROACH TO PLOT USING NETWORKX. [NOT IMPLEMENTED]
 # G = nx.Graph()
 # for v in V1:
 #     G.add_node(v)
@@ -110,19 +133,4 @@ image.show()
 # for i in G.nodes():
 #     pos[i] = (i[1],i[0])
 # nx.draw_networkx(G,pos=pos,node_size=1.5,with_labels=0,width=0.2,node_color='blue',edge_color='orange')
-X = []
-Y = []
-for i in path:
-    X.append(i[1])
-    Y.append(i[0])
-    plt.plot(i[1],i[0],'bo')
-plt.imshow(image)
-plt.plot(X,Y)
-xV = []
-yV = []
-for i in V1:
-    xV.append(i[1])
-    yV.append(i[0])
-plt.scatter(xV,yV,c ="red",s = 5)
-plt.show()
 
