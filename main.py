@@ -11,7 +11,7 @@ import networkx as nx
 import pylab
 
 # Accessing the occupancy grid
-image = Image.open("/home/kaushal/Mobile_Robotics/occupancy_map.png")
+image = Image.open("YOUR PATH/occupancy_map.png")
 occ_grid_orig = np.asarray(image)   # This gives a non-mutable numpy array. 
 occ_grid = occ_grid_orig.copy()     # Copying this to another array which is mutable
 for i in range(occ_grid.shape[0]):
