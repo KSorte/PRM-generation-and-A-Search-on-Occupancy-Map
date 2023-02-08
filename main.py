@@ -1,14 +1,13 @@
 from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
 
 import AuxillaryFunctions
 import A_star_search
 import PRM
 import PRM_Functions
 import networkx as nx
-import pylab
+
 
 # Accessing the occupancy grid
 image = Image.open("YOUR PATH/occupancy_map.png")
